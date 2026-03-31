@@ -3,15 +3,35 @@
 	<head>
 		<title>Fancify Shamcify</title>
 
-		<!-- link to your script file here -->
-		
+		<!-- Linker -->
+		<script src="fancifymytext.js" defer></script>
+
 	</head>
 
 	<body>
 		<h1>Fancify my Text</h1>
-		
+
 
 		<!-- Your UI controls go here -->
-		
+		<fieldset>
+			<legend>Text</legend>
+			<!-- Text box for user to type into -->
+			<textarea id="myText" rows="4" cols="30"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Fancify</legend>
+			<!-- Makes the text bigger when clicked -->
+			<button onclick="makeBigger()">Bigger!</button>
+			<br><br>
+			<!-- Radio buttons to toggle fancy vs plain styling -->
+			<input type="radio" id="fancyShmancy" name="style" onchange="applyStyle()">
+			<label for="fancyShmancy">FancyShmancy</label>
+			<input type="radio" id="boringBetty" name="style" onchange="applyStyle()">
+			<label for="boringBetty">BoringBetty</label>
+			<br><br>
+			<!-- Uppercases text and adds -Moo to end of each sentence -->
+			<button onclick="mooify()">Moo</button>
+		</fieldset>
 	</body>
 </html>
